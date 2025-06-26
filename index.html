@@ -37,37 +37,37 @@ support high-velocity software delivery.</p>
   <section>
     <h2>Skills</h2>
     <div class="skill-section">
-      <div class="skill-header" onclick="toggleSkill(this)">Automation Tools & Frameworks</div>
+      <div class="skill-header">Automation Tools & Frameworks</div>
       <div class="skill-content">Selenium WebDriver, Playwright, AutoIt, SpecFlow (BDD), TestNG, RestAPI (Postman, RestSharp, HttpClient)</div>
 
-      <div class="skill-header" onclick="toggleSkill(this)">Framework Design & Testing Approaches</div>
+      <div class="skill-header">Framework Design & Testing Approaches</div>
       <div class="skill-content">Page Object Model (POM), Data-Driven Testing, Behavior-Driven Development (BDD), Gherkin Syntax</div>
 
-      <div class="skill-header" onclick="toggleSkill(this)">Version Control</div>
+      <div class="skill-header">Version Control</div>
       <div class="skill-content">Git</div>
 
-      <div class="skill-header" onclick="toggleSkill(this)">Reporting & Logging Tools</div>
+      <div class="skill-header">Reporting & Logging Tools</div>
       <div class="skill-content">Extent Reports, Log4j, TestNG Listeners</div>
 
-      <div class="skill-header" onclick="toggleSkill(this)">Build & Dependency Management</div>
+      <div class="skill-header">Build & Dependency Management</div>
       <div class="skill-content">Maven, NuGet</div>
 
-      <div class="skill-header" onclick="toggleSkill(this)">Programming Languages</div>
+      <div class="skill-header">Programming Languages</div>
       <div class="skill-content">Java, C# (.Net), Python, TypeScript</div>
 
-      <div class="skill-header" onclick="toggleSkill(this)">CI/CD</div>
+      <div class="skill-header">CI/CD</div>
       <div class="skill-content">Azure DevOps (ADO), Jenkins, TeamCity</div>
 
-      <div class="skill-header" onclick="toggleSkill(this)">IDEs</div>
+      <div class="skill-header">IDEs</div>
       <div class="skill-content">Visual Studio, Eclipse</div>
 
-      <div class="skill-header" onclick="toggleSkill(this)">Database & Backend Validation</div>
+      <div class="skill-header">Database & Backend Validation</div>
       <div class="skill-content">Microsoft SQL Server, SQL Queries</div>
 
-      <div class="skill-header" onclick="toggleSkill(this)">Code Quality & Coverage Tools</div>
+      <div class="skill-header">Code Quality & Coverage Tools</div>
       <div class="skill-content">SonarLint, SonarQube, Jacoco, IntelliSense, AI</div>
 
-      <div class="skill-header" onclick="toggleSkill(this)">Methodologies & Processes</div>
+      <div class="skill-header">Methodologies & Processes</div>
       <div class="skill-content">Agile (Scrum, Sprint Planning, Daily Stand-Ups, Retrospectives), SDLC, STLC, BLC</div>
     </div>
   </section>
@@ -124,7 +124,7 @@ support high-velocity software delivery.</p>
   <section>
     <h2>Notable Contributions</h2>
     <div class="skill-section">
-      <div class="skill-header" onclick="toggleSkill(this)">Notable Contributions</div>
+      <div class="skill-header">Notable Contributions</div>
       <div class="skill-content">
         <ul>
           <li>Implemented permission-level design for single user centric function controls and ADO DB seed scripting to ensure accurate and secure user provisioning.</li>
@@ -152,10 +152,13 @@ support high-velocity software delivery.</p>
       document.body.classList.toggle("dark-mode");
     }
 
-    function toggleSkill(element) {
-      const content = element.nextElementSibling;
-      content.style.display = content.style.display === "block" ? "none" : "block";
-    }
+    // make all skill-headers expandable
+    document.querySelectorAll(".skill-header").forEach(header => {
+      header.addEventListener("click", function () {
+        const content = this.nextElementSibling;
+        content.style.display = content.style.display === "block" ? "none" : "block";
+      });
+    });
   </script>
 </body>
 </html>
